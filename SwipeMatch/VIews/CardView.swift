@@ -10,7 +10,7 @@ import UIKit
 
 class CardView: UIView {
 
-    fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "girl-1"))
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "girl-1"))
 
     // Configuration
     fileprivate let treshhold: CGFloat = 100
@@ -22,6 +22,7 @@ class CardView: UIView {
         layer.cornerRadius = 10
         clipsToBounds = true
         
+        imageView.contentMode = .scaleAspectFill
         addSubview(imageView)
         imageView.fillSuperview()
         
@@ -63,7 +64,9 @@ class CardView: UIView {
         }, completion: ({ (_) in
             print("Complited animation, let's bring our card back")
             self.transform = .identity
-            self.removeFromSuperview()
+            if shouldDismissCard {
+                self.removeFromSuperview()
+            }
         }))
     }
     
