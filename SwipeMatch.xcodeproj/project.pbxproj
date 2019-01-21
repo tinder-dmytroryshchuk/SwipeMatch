@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C539FE8921F47EDB00A4A238 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539FE8821F47EDB00A4A238 /* AppDelegate.swift */; };
-		C539FE8B21F47EDB00A4A238 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539FE8A21F47EDB00A4A238 /* ViewController.swift */; };
+		C539FE8B21F47EDB00A4A238 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539FE8A21F47EDB00A4A238 /* HomeController.swift */; };
 		C539FE8E21F47EDB00A4A238 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C539FE8C21F47EDB00A4A238 /* Main.storyboard */; };
 		C539FE9021F47EDC00A4A238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C539FE8F21F47EDC00A4A238 /* Assets.xcassets */; };
 		C539FE9321F47EDC00A4A238 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C539FE9121F47EDC00A4A238 /* LaunchScreen.storyboard */; };
@@ -16,12 +16,13 @@
 		C539FE9F21F489BC00A4A238 /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539FE9E21F489BC00A4A238 /* HomeBottomControlsStackView.swift */; };
 		C539FEA121F48EF100A4A238 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539FEA021F48EF100A4A238 /* TopNavigationStackView.swift */; };
 		C539FEA321F4DA9D00A4A238 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539FEA221F4DA9D00A4A238 /* CardView.swift */; };
+		C539FEA821F50EA000A4A238 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539FEA721F50EA000A4A238 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C539FE8521F47EDB00A4A238 /* SwipeMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C539FE8821F47EDB00A4A238 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C539FE8A21F47EDB00A4A238 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C539FE8A21F47EDB00A4A238 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C539FE8D21F47EDB00A4A238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C539FE8F21F47EDC00A4A238 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C539FE9221F47EDC00A4A238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		C539FE9E21F489BC00A4A238 /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
 		C539FEA021F48EF100A4A238 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
 		C539FEA221F4DA9D00A4A238 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C539FEA721F50EA000A4A238 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +64,11 @@
 		C539FE8721F47EDB00A4A238 /* SwipeMatch */ = {
 			isa = PBXGroup;
 			children = (
+				C539FEA621F50E8600A4A238 /* Model */,
 				C539FE9D21F4898500A4A238 /* VIews */,
 				C539FE9C21F4893E00A4A238 /* Extension */,
 				C539FE8821F47EDB00A4A238 /* AppDelegate.swift */,
-				C539FE8A21F47EDB00A4A238 /* ViewController.swift */,
+				C539FE8A21F47EDB00A4A238 /* HomeController.swift */,
 				C539FE8C21F47EDB00A4A238 /* Main.storyboard */,
 				C539FE8F21F47EDC00A4A238 /* Assets.xcassets */,
 				C539FE9121F47EDC00A4A238 /* LaunchScreen.storyboard */,
@@ -90,6 +93,14 @@
 				C539FEA221F4DA9D00A4A238 /* CardView.swift */,
 			);
 			path = VIews;
+			sourceTree = "<group>";
+		};
+		C539FEA621F50E8600A4A238 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C539FEA721F50EA000A4A238 /* User.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,12 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C539FE8B21F47EDB00A4A238 /* ViewController.swift in Sources */,
+				C539FE8B21F47EDB00A4A238 /* HomeController.swift in Sources */,
 				C539FE9F21F489BC00A4A238 /* HomeBottomControlsStackView.swift in Sources */,
 				C539FE8921F47EDB00A4A238 /* AppDelegate.swift in Sources */,
 				C539FE9B21F482A900A4A238 /* Extensions+UIView.swift in Sources */,
 				C539FEA321F4DA9D00A4A238 /* CardView.swift in Sources */,
 				C539FEA121F48EF100A4A238 /* TopNavigationStackView.swift in Sources */,
+				C539FEA821F50EA000A4A238 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
